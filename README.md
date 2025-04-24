@@ -92,13 +92,13 @@ Ofrece un **dashboard interactivo** con filtros, vistas detalladas por libro, b�
 
 ## 🚀 Cómo ejecutar el proyecto
 
-
+```bash 
 git clone https://github.com/tu_usuario/biblioteca-nyt.git
 cd biblioteca-nyt
 open index.html
+```
 
 
-```bash 
 ## 👀 Visita el proyecto
 
 👉 [Haz clic aquí para ver la demo en GitHub Pages](https://pablobacigalupe.github.io/Web_biblioteca/)
