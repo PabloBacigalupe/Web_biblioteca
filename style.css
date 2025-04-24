@@ -1,0 +1,202 @@
+/* --- RESET Y BASE --- */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+  }
+  
+  /* --- HEADER --- */
+  header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  /* --- LOADER --- */
+  #loader {
+    text-align: center;
+    margin: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* --- GRID PARA LAS CARDS (Mobile: una sola columna) --- */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* --- CARD --- */
+  .card {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #1e3a8a;
+  }
+  
+  .card p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .card button {
+    margin-top: 1rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+  }
+  
+  .card button:hover {
+    background-color: #3b82f6;
+  }
+
+  
+
+  #filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+  
+  #filtros input,
+  #filtros select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+
+
+   /* boton volver a las listas */
+   #volver {
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    background-color: #1e3a8a;
+    cursor: pointer;
+   }
+
+
+
+  /*  MEDIA QUERIES  */
+
+  
+  /* Media query para escritorio: filtros en línea */
+  @media (min-width: 600px) {
+    #filtros {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    #filtros input,
+    #filtros select {
+      width: 30%;
+    }
+  }
+
+
+
+  
+
+  /* 600px */
+  @media (min-width: 600px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .cards-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+  
+    .card {
+      padding: 1.25rem;
+    }
+  }
+  
+
+  /* 900px */
+  @media (min-width: 900px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .cards-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+    }
+  
+    .card {
+      padding: 1.5rem;
+    }
+  }
+
+
+  /* 1500px */
+  @media (min-width: 1500px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .cards-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+    }
+  
+    .card {
+      padding: 1.5rem;
+    }
+  }
+
+
+
+  /* 1800px */
+  @media (min-width: 1800px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .cards-grid {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+    }
+  
+    .card {
+      padding: 1.5rem;
+    }
+  }
