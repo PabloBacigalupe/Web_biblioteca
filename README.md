@@ -39,15 +39,6 @@ Ofrece un **dashboard interactivo** con filtros, vistas detalladas por libro, b�
 
 ---
 
-## 💡 Extras opcionales
-
-- [ ] Uso de otras APIs complementarias
-- [ ] Guardado de favoritos con Local Storage
-- [ ] Firebase para login y almacenamiento
-- [ ] Conversión en PWA (Progressive Web App)
-
----
-
 ## 🧪 Funcionalidades implementadas
 
 ### Vista principal (Dashboard de categorías)
