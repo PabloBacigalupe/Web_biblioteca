@@ -13,13 +13,16 @@ const container = document.getElementById('listas-container');
 loader.style.display = 'block';
 container.style.visibility = 'hidden';
 
-// Simular carga LOADER
+
 window.addEventListener('DOMContentLoaded', () => {
   console.log(loader)
+  //Espera que el DOM esté completamente cargado antes de ejecutar 
+  // el contenido de la función.
+  // Simular carga LOADER
   setTimeout(() => {
     loader.style.display = 'none';
     container.style.visibility = 'visible';
-  }, 2000);
+  }, 500);
 }); 
     
 
@@ -68,9 +71,9 @@ async function obtenerListas() {
 
     // Añadir evento a cada botón
     const botones = document.querySelectorAll('button[data-list]');
-    botones.forEach((btn) => {
-      btn.addEventListener('click', (e) => {
-        const listaSeleccionada = e.target.dataset.list;
+    botones.forEach((button) => {
+      button.addEventListener('click', (buttonDataList) => {
+        const listaSeleccionada = buttonDataList.target.dataset.list;
         mostrarLibros(listaSeleccionada);
       });
     });
@@ -126,7 +129,7 @@ function aplicarFiltros() {
 }
 
 
-//Pintar listas
+//Pintar listas (categoráis)
 function pintarListas(listas) {
     container.innerHTML = '';
     listas.forEach((lista) => {
@@ -141,13 +144,14 @@ function pintarListas(listas) {
         <button data-list="${lista.list_name_encoded}">Ver libros</button>
       `;
   
-      container.appendChild(card);
+      container.appendChild(card); //Agrega la card al container (en el DOM), 
+      // haciendo que la pinte en la página.
     });
   
     // Reactivar botones
-    document.querySelectorAll('button[data-list]').forEach((btn) => {
-      btn.addEventListener('click', (e) => {
-        const listaSeleccionada = e.target.dataset.list;
+    document.querySelectorAll('button[data-list]').forEach((button) => {
+      button.addEventListener('click', (listButton) => {
+        const listaSeleccionada = listButton.target.dataset.list;
         mostrarLibros(listaSeleccionada);
       });
     });
